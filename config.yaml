@@ -1,0 +1,6 @@
+is_debug: true
+listen:
+  type: port
+  bind_ip: 127.0.0.1
+  port: 3001
+databaseUrl: root:aaa@tcp(127.0.0.1:3306)/MarketDB
