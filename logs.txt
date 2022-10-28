@@ -317,3 +317,50 @@ INFO: 2022/10/19 23:59:44 logging.go:34: Listen...
 INFO: 2022/10/20 00:19:35 logging.go:34: Reading configuration
 INFO: 2022/10/20 00:19:35 logging.go:34: DB is ready!
 INFO: 2022/10/20 00:19:35 logging.go:34: Listen...
+INFO: 2022/10/28 19:59:11 logging.go:34: Get logger
+INFO: 2022/10/28 19:59:11 logging.go:34: Reading configuration
+INFO: 2022/10/28 19:59:11 logging.go:34: Listen...
+INFO: 2022/10/28 22:22:28 logging.go:34: Get logger
+INFO: 2022/10/28 22:22:28 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:22:28 logging.go:34: Listen...
+INFO: 2022/10/28 22:23:16 logging.go:34: Get logger
+INFO: 2022/10/28 22:23:16 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:23:16 logging.go:34: Listen...
+INFO: 2022/10/28 22:26:28 logging.go:34: Get logger
+INFO: 2022/10/28 22:26:28 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:26:28 logging.go:34: Listen...
+INFO: 2022/10/28 22:39:10 logging.go:34: Get logger
+INFO: 2022/10/28 22:39:10 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:39:10 logging.go:34: Listen...
+INFO: 2022/10/28 22:39:55 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:39:55 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:39:55 logging.go:34: Listen... 
+INFO: 2022/10/28 22:39:55 logging.go:34: 3000
+INFO: 2022/10/28 22:41:22 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:41:22 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:41:22 logging.go:34: Listen... 
+INFO: 2022/10/28 22:41:22 logging.go:34: 3000
+INFO: 2022/10/28 22:47:05 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:47:05 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:47:05 logging.go:34: Listen... 
+INFO: 2022/10/28 22:47:05 logging.go:34: 3000
+INFO: 2022/10/28 22:48:04 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:48:04 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:48:04 logging.go:34: Listen... 
+INFO: 2022/10/28 22:48:04 logging.go:34: 3000
+INFO: 2022/10/28 22:49:12 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:49:12 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:49:12 logging.go:34: Listen... 
+INFO: 2022/10/28 22:49:12 logging.go:34: 3000
+INFO: 2022/10/28 22:50:27 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:50:27 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:50:27 logging.go:34: Listen... 
+INFO: 2022/10/28 22:50:27 logging.go:34: 3000
+INFO: 2022/10/28 22:52:29 logging.go:34: Reading configuration
+INFO: 2022/10/28 22:52:29 logging.go:34: DB is ready!
+INFO: 2022/10/28 22:52:29 logging.go:34: Listen... 
+INFO: 2022/10/28 22:52:29 logging.go:34: 3000
+INFO: 2022/10/29 02:16:00 logging.go:34: Reading configuration
+INFO: 2022/10/29 02:16:00 logging.go:34: DB is ready!
+INFO: 2022/10/29 02:16:00 logging.go:34: Listen... 
+INFO: 2022/10/29 02:16:00 logging.go:34: 3000

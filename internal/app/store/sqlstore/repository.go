@@ -16,7 +16,6 @@ func (r *Repository) Create(e *model.Employee) error {
 		e.Status,
 		e.Password,
 	)
-	fmt.Println(query)
 	return r.store.db.QueryRow(query).Scan(&e.ID)
 }
 

@@ -8,6 +8,7 @@ import (
 	"test_go/internal/app/model"
 	"test_go/internal/app/store"
 	"test_go/pkg/auth"
+	"time"
 
 	"log"
 
@@ -63,7 +64,7 @@ func (h *handler) CreateUser(w http.ResponseWriter, r *http.Request, params http
 	e := &model.Employee{
 		Name:     req.Name,
 		Status:   req.Status,
-		Password: auth.GeneratePasswordHash(req.Password),
+		Password: req.Password,
 	}
 	if err := h.store.Repository().Create(e); err != nil {
 		log.Fatal(err)
@@ -84,25 +85,47 @@ func (h *handler) SingIn(w http.ResponseWriter, r *http.Request, params httprout
 		log.Fatal(err)
 	}
 
+	log.Println(req)
+
 	e := &model.Employee{
 		Name:     req.Name,
-		Password: auth.GeneratePasswordHash(req.Password),
+		Password: req.Password,
 	}
 	user, err := h.store.Repository().FindUser(e)
 	if err != nil {
 		log.Fatal(err)
 	}
 	id := user.ID
+	status := user.Status
 
-	token, err := auth.GenerateTokenJWT(id)
+	_, err = auth.GenerateTokenJWT(id, status)
 	if err != nil {
 		log.Fatal(err)
 	}
-	w.Write([]byte(fmt.Sprintf("Ваш токен: '%s'", token)))
+
+	refresh, err := auth.GenerateTokenRefresh()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	timeClose := int(time.Now().Add(auth.TokenTTL).Unix())
+	session := &model.Session{
+		UserId:       id,
+		Status:       status,
+		RefreshToken: refresh,
+		TimeClose:    timeClose,
+	}
+
+	if err := h.store.Sessions().Create(session); err != nil {
+		log.Fatal(err)
+	}
+
+	w.Write([]byte(fmt.Sprintf("Новая сессия: '%d', '%s', '%s', '%d'", id, status, refresh, timeClose)))
 
 }
 
 func (h *handler) GetUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+
 	w.Write([]byte(fmt.Sprintf("Get user")))
 	w.WriteHeader(200)
 }

@@ -7,8 +7,8 @@ import (
 
 type Logger struct {
 	warningLogger *log.Logger
-	infoLogger    *log.Logger
 	errorLogger   *log.Logger
+	infoLogger    *log.Logger
 }
 
 var l *Logger
@@ -20,7 +20,7 @@ func init() {
 	}
 
 	l = &Logger{
-		warningLogger: log.New(file, "INFO: ", log.Ldate|log.Ltime|log.Lshortfile),
+		warningLogger: log.New(file, "WARNING: ", log.Ldate|log.Ltime|log.Lshortfile),
 		infoLogger:    log.New(file, "INFO: ", log.Ldate|log.Ltime|log.Lshortfile),
 		errorLogger:   log.New(file, "ERROR: ", log.Ldate|log.Ltime|log.Lshortfile),
 	}

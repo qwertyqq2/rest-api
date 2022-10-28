@@ -21,7 +21,8 @@ func Start(config *Config) error {
 
 	srv := NewServer(store)
 
-	logging.GetLogger().Info("Listen...")
+	logging.GetLogger().Info("Listen... ")
+	logging.GetLogger().Info(config.Listen.Port)
 	return http.ListenAndServe(config.Listen.BindIp+":"+config.Listen.Port, srv)
 }
 

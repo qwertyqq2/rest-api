@@ -20,6 +20,13 @@ CREATE TABLE `Items` (
 	`ownerId` INT NOT NULL
 );
 
+CREATE TABLE `Sessions` (
+	`userId` INT NOT NULL,
+	`status` VARCHAR(255) NOT NULL,
+	`refreshToken` VARCHAR(255) NOT NULL,
+	`timeClose` INT NOT NULL
+);
+
 ALTER TABLE `Transactions` ADD CONSTRAINT `Transactions_fk0` FOREIGN KEY (`idSender`) REFERENCES `Employees`(`id`);
 
 ALTER TABLE `Transactions` ADD CONSTRAINT `Transactions_fk1` FOREIGN KEY (`idReceiver`) REFERENCES `Employees`(`id`);
