@@ -364,3 +364,73 @@ INFO: 2022/10/29 02:16:00 logging.go:34: Reading configuration
 INFO: 2022/10/29 02:16:00 logging.go:34: DB is ready!
 INFO: 2022/10/29 02:16:00 logging.go:34: Listen... 
 INFO: 2022/10/29 02:16:00 logging.go:34: 3000
+INFO: 2022/10/29 06:17:31 logging.go:34: Reading configuration
+INFO: 2022/10/29 06:17:31 logging.go:34: DB is ready!
+INFO: 2022/10/29 06:17:31 logging.go:34: Listen... 
+INFO: 2022/10/29 06:17:31 logging.go:34: 3000
+INFO: 2022/10/29 07:58:55 logging.go:34: Reading configuration
+INFO: 2022/10/29 07:58:55 logging.go:34: DB is ready!
+INFO: 2022/10/29 07:58:55 logging.go:34: Listen... 
+INFO: 2022/10/29 07:58:55 logging.go:34: 3000
+INFO: 2022/10/30 11:39:40 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:39:40 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:39:40 logging.go:34: Listen... 
+INFO: 2022/10/30 11:39:40 logging.go:34: 3000
+INFO: 2022/10/30 11:46:02 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:46:02 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:46:02 logging.go:34: Listen... 
+INFO: 2022/10/30 11:46:02 logging.go:34: 3000
+INFO: 2022/10/30 11:49:37 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:49:37 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:49:37 logging.go:34: Listen... 
+INFO: 2022/10/30 11:49:37 logging.go:34: 3000
+INFO: 2022/10/30 11:50:08 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:50:08 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:50:08 logging.go:34: Listen... 
+INFO: 2022/10/30 11:50:08 logging.go:34: 3000
+INFO: 2022/10/30 11:52:49 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:52:49 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:52:49 logging.go:34: Listen... 
+INFO: 2022/10/30 11:52:49 logging.go:34: 3000
+INFO: 2022/10/30 11:53:44 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:53:44 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:53:44 logging.go:34: Listen... 
+INFO: 2022/10/30 11:53:44 logging.go:34: 3000
+INFO: 2022/10/30 11:57:11 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:57:11 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:57:11 logging.go:34: Listen... 
+INFO: 2022/10/30 11:57:11 logging.go:34: 3000
+INFO: 2022/10/30 11:58:01 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:58:01 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:58:01 logging.go:34: Listen... 
+INFO: 2022/10/30 11:58:01 logging.go:34: 3000
+INFO: 2022/10/30 11:59:23 logging.go:34: Reading configuration
+INFO: 2022/10/30 11:59:23 logging.go:34: DB is ready!
+INFO: 2022/10/30 11:59:23 logging.go:34: Listen... 
+INFO: 2022/10/30 11:59:23 logging.go:34: 3000
+INFO: 2022/10/30 12:03:05 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:03:05 logging.go:34: DB is ready!
+INFO: 2022/10/30 12:03:05 logging.go:34: Listen... 
+INFO: 2022/10/30 12:03:05 logging.go:34: 3000
+INFO: 2022/10/30 12:04:49 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:04:49 logging.go:34: DB is ready!
+INFO: 2022/10/30 12:04:49 logging.go:34: Listen... 
+INFO: 2022/10/30 12:04:49 logging.go:34: 3000
+INFO: 2022/10/30 12:05:52 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:05:52 logging.go:34: DB is ready!
+INFO: 2022/10/30 12:05:52 logging.go:34: Listen... 
+INFO: 2022/10/30 12:05:52 logging.go:34: 3000
+INFO: 2022/10/30 12:11:59 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:11:59 logging.go:34: DB is ready!
+INFO: 2022/10/30 12:11:59 logging.go:34: Listen... 
+INFO: 2022/10/30 12:11:59 logging.go:34: 3000
+INFO: 2022/10/30 12:35:09 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:35:09 logging.go:34: Listen... 
+INFO: 2022/10/30 12:38:51 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:38:51 logging.go:34: Listen... 
+INFO: 2022/10/30 12:41:38 logging.go:34: Reading configuration
+INFO: 2022/10/30 12:41:38 logging.go:34: Listen... 
+INFO: 2022/10/30 13:03:38 logging.go:34: Reading configuration
+INFO: 2022/10/30 13:03:38 logging.go:34: Listen... 
+INFO: 2022/10/30 13:12:46 logging.go:34: Reading configuration
+INFO: 2022/10/30 13:12:46 logging.go:34: Listen... 

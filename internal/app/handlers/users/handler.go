@@ -17,7 +17,7 @@ import (
 
 const (
 	usersUrl = "/users"
-	userUrl  = "/users/:uuid"
+	userUrl  = "/profile"
 	singUrl  = "/singIn"
 )
 
@@ -32,11 +32,7 @@ func New(s store.Store) handlers.Handler {
 // /Прописать коды ответов
 func (h *handler) Register(router *httprouter.Router) {
 	router.GET(usersUrl, h.GetList)
-	router.POST(usersUrl, h.CreateUser)
-	router.GET(userUrl, h.GetUser)
-	router.PUT(userUrl, h.UpdateUser)
-	router.PATCH(userUrl, h.PartiallyUpdateUser)
-	router.DELETE(userUrl, h.DeleteUser)
+	router.GET(userUrl, authorizeMiddleware(http.HandlerFunc(h.GetUser)))
 	router.POST(singUrl, h.SingIn)
 }
 
@@ -98,7 +94,7 @@ func (h *handler) SingIn(w http.ResponseWriter, r *http.Request, params httprout
 	id := user.ID
 	status := user.Status
 
-	_, err = auth.GenerateTokenJWT(id, status)
+	jwt, err := auth.GenerateTokenJWT(id, status)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -120,27 +116,18 @@ func (h *handler) SingIn(w http.ResponseWriter, r *http.Request, params httprout
 		log.Fatal(err)
 	}
 
-	w.Write([]byte(fmt.Sprintf("Новая сессия: '%d', '%s', '%s', '%d'", id, status, refresh, timeClose)))
+	w.Write([]byte(fmt.Sprintf("Токен сессии: '%s'", jwt)))
 
 }
 
-func (h *handler) GetUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+func (h *handler) GetUser(w http.ResponseWriter, r *http.Request) {
+	log.Println("Get user...")
+	idCook, statusCook := r.Cookies()[0], r.Cookies()[1]
+	w.Write([]byte(fmt.Sprintf("User: %s, %s", idCook.Value, statusCook.Value)))
 
-	w.Write([]byte(fmt.Sprintf("Get user")))
-	w.WriteHeader(200)
-}
+	//var user *auth.ResultClaims
 
-func (h *handler) UpdateUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte(fmt.Sprintf("Update user")))
-	w.WriteHeader(204)
-}
-
-func (h *handler) PartiallyUpdateUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte(fmt.Sprintf("Part update user")))
-	w.WriteHeader(204)
-}
-
-func (h *handler) DeleteUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte(fmt.Sprintf("Delete user")))
-	w.WriteHeader(204)
+	//mapstructure.Decode(claims.(jwt.MapClaims), &user)
+	//fmt.Println(user)
+	//w.Write([]byte(fmt.Sprintf("User: %d, %s", user.UserId, user.Status)))
 }

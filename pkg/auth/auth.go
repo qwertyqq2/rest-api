@@ -41,23 +41,30 @@ func GenerateTokenJWT(userid int, status string) (string, error) {
 	return token.SignedString([]byte(signingKey))
 }
 
-func ParseToken(accessToken string, signingKey []byte) (string, error) {
+type ResultClaims struct {
+	UserId int    `json:"userId"`
+	Status string `json:"status"`
+}
+
+func ParseToken(accessToken string) (*ResultClaims, error) {
 	token, err := jwt.ParseWithClaims(accessToken, &tokenClaims{}, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
 		}
-		return signingKey, nil
+		return []byte(signingKey), nil
 	})
 
 	if err != nil {
-		return "", err
+		return nil, err
 	}
-
 	if claims, ok := token.Claims.(*tokenClaims); ok && token.Valid {
-		return claims.Id, nil
+		return &ResultClaims{
+			UserId: claims.UserId,
+			Status: claims.Status,
+		}, nil
 	}
 
-	return "", ErrInvalidAccessToken
+	return nil, ErrInvalidAccessToken
 }
 
 func GenerateTokenRefresh() (string, error) {
