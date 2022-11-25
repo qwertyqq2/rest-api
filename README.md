@@ -1,6 +1,14 @@
 # rest-api
 
 ```shell
-make
+
+##install
+
+go get github.com/qwertyqq2/rest-api
+
+cd rest-api
+
+##start
+
 ./main
 ```
